@@ -1,16 +1,13 @@
-
-
 nav{
     width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px black solid;
-    min-height: 60px;
+    min-height: 10vh;
     background: transparent;
     
     .logo{
-        padding-left: 160px;
+        padding-left: 300px;
         }
     .logo img{
             padding-top: 10px;
@@ -26,11 +23,12 @@ nav{
         font-weight: bold;
         cursor: pointer;
 
-        
         }
     .items ul li{
         color: $navtext-color;
 
-        
+        &:hover{
+            color: $navhover-color;
+        }
         }
 }

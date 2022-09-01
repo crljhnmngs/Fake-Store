@@ -1,0 +1,52 @@
+
+main{
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+
+    .heading{
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        padding: 0 60px;
+        align-items: center;
+
+        h1{
+            padding-top: 180px;
+            padding-bottom: 30px;
+            font-size: 50px;
+            letter-spacing: 5px;
+            color: $h1-color;
+        }
+        p{
+            color: $paragraph-color;
+            letter-spacing: 5px;
+            
+        }
+        button{
+            margin-top: 50px;
+            min-height: 45px;
+            min-width: 180px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            font-size: 18px;
+            background: $button-color;
+            cursor: pointer;
+            &:hover{
+                scale: 1.1;
+            }
+        }
+    }
+    
+    .images{
+        width: 50vw;
+
+    img{
+            margin-top: -20px;
+            width: 700px;
+            height: 85vh;
+        }
+    }
+    
+}
