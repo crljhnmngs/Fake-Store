@@ -1,0 +1,12 @@
+@import 'config';
+@import 'header';
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $primay-font;
+}
