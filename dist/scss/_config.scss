@@ -20,6 +20,16 @@ $primay-font: 'Poppins', sans-serif;
 
 //------MEDIA QUERIES---
 
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+    @content;
+    }
+}
 
+@mixin media-md {
+    @media screen and (max-width: 768px) {
+    @content;
+    }
+}
 
 //------MEDIA QUERIES---

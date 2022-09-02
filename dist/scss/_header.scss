@@ -4,31 +4,89 @@ nav{
     justify-content: space-between;
     align-items: center;
     min-height: 10vh;
-    background: transparent;
     
     .logo{
-        padding-left: 300px;
-        }
-    .logo img{
-            padding-top: 10px;
-            height: 55px;
-            width: 110px;
+        padding-left: 50px;
+
+        img{
+            height: 40px;
+            width: 90px;
             }
+        }
+
     .items ul{
         padding-right: 100px;
         display: flex;
-        gap: 80px;
+        gap: 50px;
         justify-content: space-evenly;
         list-style: none;
         font-weight: bold;
         cursor: pointer;
+        li{
+            color: $navtext-color;
+            
+            a{
+                text-decoration: none;
+                color: $navtext-color;
+
+                &:hover{
+                    color: $navhover-color;
+                }
+            }
+        }
+    }
+    .menu-bar{
+            padding-right: 40px;
+            display: none;
+        i{ 
+            cursor: pointer;
+            font-size: 22px;
+        }
+    }
+}
+
+@include media-lg{
+    nav{
+        .logo{
+            padding-left: 300px;
+            img{
+            height: 55px;
+            width: 110px;
+            }
 
         }
-    .items ul li{
-        color: $navtext-color;
+        .items ul{
+            gap:80px;
+        }
+    }
+}
 
-        &:hover{
-            color: $navhover-color;
+@include media-md{
+    nav{
+        .items{
+            display: none;
+
+
+            ul{
+                position:absolute;
+                left: 0;
+                right: 0;
+                top: 70px;
+                padding: 20px 10px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                background: rgb(243 244 246);
+                transition: .3s;
+            }
         }
+        .menu-bar{
+            display: block;
         }
+    }
+    .items.active{
+            display: flex;
+        
+    }
 }
