@@ -1,5 +1,5 @@
 @import 'config';
-
+@import 'header';
 *{
     padding: 0;
     margin: 0;
@@ -8,4 +8,60 @@
 
 body{
     font-family: $primay-font;
+}
+
+main{
+    min-height: 90vh;;
+    max-height: auto;
+    width: 100vw;
+    background-color: $productbg-color;
+
+    .cards{
+        display: grid;
+        grid-template-columns: (auto auto auto auto);
+        justify-content: center; 
+        gap: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        .card{
+            background: #ffffff;
+            width: 300px;
+            min-height: auto;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .image img{
+                margin-top: 10px;
+                min-height: 150px;
+                max-height: 150px;
+            }
+            .info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 10px;
+
+                .title{
+                    text-align: center;
+                    letter-spacing: 1px;
+                    padding: 0 5px;
+                    font-size: 20px;
+                    font-weight: 500;
+                    
+                }
+                .price{
+                    padding-top: 20px;
+                    color: $price-color;
+                }
+                .rating{
+                    padding: 15px 0;
+                    color: $star-color;
+                    
+                }
+            }
+        }
+    }
 }

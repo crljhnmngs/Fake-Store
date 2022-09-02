@@ -1,3 +1,82 @@
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+}
+nav .logo {
+  padding-left: 50px;
+}
+nav .logo img {
+  height: 40px;
+  width: 90px;
+}
+nav .items ul {
+  padding-right: 100px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+nav .items ul li {
+  color: #463761;
+}
+nav .items ul li a {
+  text-decoration: none;
+  color: #463761;
+}
+nav .items ul li a:hover {
+  color: rgb(3, 105, 161);
+}
+nav .menu-bar {
+  padding-right: 40px;
+  display: none;
+}
+nav .menu-bar i {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  nav .logo {
+    padding-left: 300px;
+    padding-top: 10px;
+  }
+  nav .logo img {
+    height: 55px;
+    width: 110px;
+  }
+  nav .items ul {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .items {
+    display: none;
+  }
+  nav .items ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(243, 244, 246);
+    transition: 0.3s;
+  }
+  nav .menu-bar {
+    display: block;
+  }
+  .items.active {
+    display: flex;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -6,4 +85,54 @@
 
 body {
   font-family: "Poppins", sans-serif;
+}
+
+main {
+  min-height: 90vh;
+  max-height: auto;
+  width: 100vw;
+  background-color: #f2f2f2;
+}
+main .cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+main .cards .card {
+  background: #ffffff;
+  width: 300px;
+  min-height: auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .cards .card .image img {
+  margin-top: 10px;
+  min-height: 150px;
+  max-height: 150px;
+}
+main .cards .card .info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+}
+main .cards .card .info .title {
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 0 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+main .cards .card .info .price {
+  padding-top: 20px;
+  color: #e92467;
+}
+main .cards .card .info .rating {
+  padding: 15px 0;
+  color: #fdc304;
 }/*# sourceMappingURL=product.css.map */
