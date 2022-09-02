@@ -43,6 +43,7 @@ nav .menu-bar i {
 @media screen and (min-width: 1024px) {
   nav .logo {
     padding-left: 300px;
+    padding-top: 10px;
   }
   nav .logo img {
     height: 55px;
@@ -82,22 +83,24 @@ main {
   display: flex;
 }
 main .heading {
-  width: 50vw;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   padding: 0 60px;
   align-items: center;
+  justify-content: center;
 }
 main .heading h1 {
-  padding-top: 180px;
   padding-bottom: 30px;
   font-size: 50px;
   letter-spacing: 5px;
   color: #19063d;
+  text-align: center;
 }
 main .heading p {
   color: #514468;
   letter-spacing: 5px;
+  text-align: center;
 }
 main .heading button {
   margin-top: 50px;
@@ -114,14 +117,29 @@ main .heading button:hover {
   scale: 1.1;
 }
 main .images {
-  width: 50vw;
+  display: none;
 }
 main .images img {
-  margin-top: -20px;
-  width: 700px;
-  height: 85vh;
+  margin-top: 20px;
+  margin-left: 50px;
+  width: 600px;
+  height: 80vh;
 }
 
+@media screen and (min-width: 1024px) {
+  main .heading {
+    width: 50vw;
+  }
+  main .images {
+    display: block;
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .heading {
+    margin-top: 70px;
+  }
+}
 * {
   padding: 0;
   margin: 0;

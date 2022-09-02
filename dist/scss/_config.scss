@@ -32,4 +32,10 @@ $primay-font: 'Poppins', sans-serif;
     }
 }
 
+
+@mixin media-sm {
+    @media screen and (max-width: 400px) {
+    @content;
+    }
+}
 //------MEDIA QUERIES---

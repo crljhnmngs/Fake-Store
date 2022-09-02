@@ -49,6 +49,7 @@ nav{
     nav{
         .logo{
             padding-left: 300px;
+            padding-top: 10px;
             img{
             height: 55px;
             width: 110px;
@@ -87,6 +88,5 @@ nav{
     }
     .items.active{
             display: flex;
-        
     }
 }
