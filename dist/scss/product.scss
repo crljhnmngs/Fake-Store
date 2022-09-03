@@ -8,12 +8,14 @@
 
 body{
     font-family: $primay-font;
+    overflow-x: hidden;
 }
 
 main{
     min-height: 90vh;;
     max-height: auto;
     width: 100vw;
+    
     background-color: $productbg-color;
 
     .cards{
@@ -21,21 +23,25 @@ main{
         grid-template-columns: (auto auto auto auto);
         //grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
         justify-items: center; 
-        padding: 1em 0;
-        grid-gap: 1em;
+        grid-gap: 30px;
         align-items: center;
         padding-top: 20px;
         padding-bottom: 20px;
 
         .card{
             background: #ffffff;
-            width: 300px;
+            width: 280px;
             min-height: auto;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            cursor: pointer;
             box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+
+                &:hover{
+                    scale: 1.05;
+                }
 
             .image img{
                 margin-top: 10px;
@@ -69,3 +75,39 @@ main{
         }
     }
 }
+
+@include media-cardlg{
+    main{
+        .cards{
+        display: grid;
+        grid-template-columns: (auto auto auto);
+        }
+    }
+}
+
+@include media-lg{
+    main{
+        .cards{
+            padding: 1em 2em;
+        }
+    }
+}
+
+@include media-cardmd {
+    main{
+        .cards{
+        display: grid;
+        grid-template-columns: (auto auto);
+        }
+    }
+}
+
+@include media-cardsm {
+    main{
+        .cards{
+        display: grid;
+        grid-template-columns: (auto);
+        }
+    }
+}
+

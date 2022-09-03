@@ -40,4 +40,22 @@ $primay-font: 'Poppins', sans-serif;
     @content;
     }
 }
+
+@mixin media-cardlg {
+    @media screen and (max-width: 1350px) {
+    @content;
+    }
+}
+
+@mixin media-cardmd {
+    @media screen and (max-width: 1050px) {
+    @content;
+    }
+}
+
+@mixin media-cardsm {
+    @media screen and (max-width: 700px) {
+    @content;
+    }
+}
 //------MEDIA QUERIES---

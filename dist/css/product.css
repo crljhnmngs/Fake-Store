@@ -85,6 +85,7 @@ nav .menu-bar i {
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 main {
@@ -97,21 +98,24 @@ main .cards {
   display: grid;
   grid-template-columns: auto auto auto auto;
   justify-items: center;
-  padding: 1em 0;
-  grid-gap: 1em;
+  grid-gap: 30px;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 main .cards .card {
   background: #ffffff;
-  width: 300px;
+  width: 280px;
   min-height: auto;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+main .cards .card:hover {
+  scale: 1.05;
 }
 main .cards .card .image img {
   margin-top: 10px;
@@ -138,4 +142,28 @@ main .cards .card .info .price {
 main .cards .card .info .rating {
   padding: 15px 0;
   color: #fdc304;
+}
+
+@media screen and (max-width: 1350px) {
+  main .cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .cards {
+    padding: 1em 2em;
+  }
+}
+@media screen and (max-width: 1050px) {
+  main .cards {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  main .cards {
+    display: grid;
+    grid-template-columns: auto;
+  }
 }/*# sourceMappingURL=product.css.map */
