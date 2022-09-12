@@ -1,0 +1,239 @@
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+}
+nav .logo {
+  padding-left: 50px;
+}
+nav .logo img {
+  height: 40px;
+  width: 90px;
+}
+nav .items ul {
+  padding-right: 100px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+nav .items ul li {
+  color: #463761;
+}
+nav .items ul li a {
+  text-decoration: none;
+  color: #463761;
+}
+nav .items ul li a:hover {
+  color: rgb(3, 105, 161);
+}
+nav .menu-bar {
+  padding-right: 40px;
+  display: none;
+}
+nav .menu-bar i {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  nav .logo {
+    padding-left: 300px;
+    padding-top: 10px;
+  }
+  nav .logo img {
+    height: 55px;
+    width: 110px;
+  }
+  nav .items ul {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .items {
+    display: none;
+  }
+  nav .items ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(243, 244, 246);
+    transition: 0.3s;
+  }
+  nav .menu-bar {
+    display: block;
+  }
+  .items.active {
+    display: flex;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px;
+}
+
+.container {
+  background: #fff3e0;
+  width: 90%;
+  border-radius: 10px;
+  padding: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .header {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+  gap: 15px;
+}
+.container .header h1 {
+  font-size: 35px;
+  font-weight: 800;
+  text-align: center;
+  color: #020333;
+}
+.container .header p {
+  color: #a5a3b7;
+  font-weight: normal;
+  font-size: 18px;
+}
+.container .contact-info {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 50px;
+}
+.container .contact-info .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 230px;
+  height: 100px;
+  gap: 20px;
+}
+.container .contact-info .card:hover {
+  background: #FFFFFF;
+  cursor: pointer;
+}
+.container .contact-info .card i {
+  color: #5f30e2;
+  font-size: 25px;
+}
+.container .contact-info .card p {
+  color: #020333;
+  font-weight: 300;
+  font-size: 17.4px;
+}
+.container .wrapper {
+  background: #FFFFFF;
+  width: 700px;
+  border-radius: 10px;
+  height: 480px;
+}
+.container .wrapper textarea {
+  resize: none;
+  border: none;
+  background: #f9f9fb;
+  border-radius: 10px;
+  padding: 20px 20px;
+  outline: none;
+  font-weight: 500;
+  font-size: 18px;
+  height: 275px;
+  width: 310px;
+}
+.container .wrapper .inputs {
+  display: flex;
+  padding: 40px 40px;
+  gap: 20px;
+}
+.container .wrapper .left-input p {
+  color: #39396b;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.container .wrapper .left-input .input {
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .wrapper .left-input .input .icon {
+  border: 2px #e7e7ed solid;
+  border-radius: 7px;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+.container .wrapper .left-input .input .icon i {
+  font-size: 20px;
+  color: #39396b;
+}
+.container .wrapper .left-input .input input {
+  height: 50px;
+  width: 250px;
+  border: 2px #e7e7ed solid;
+  border-radius: 7px;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #39396b;
+  outline: none;
+}
+.container .wrapper .left-input .input input:focus {
+  border: 2px #5f30e2 solid;
+  border-left: none;
+}
+.container .wrapper .right-input p {
+  color: #39396b;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.container .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -20px;
+}
+.container .button button {
+  height: 60px;
+  width: 220px;
+  border-radius: 10px;
+  border: none;
+  background: #5f30e2;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+}/*# sourceMappingURL=contactus.css.map */

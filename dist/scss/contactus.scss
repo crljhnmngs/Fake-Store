@@ -1,0 +1,172 @@
+@import 'config';
+@import 'header';
+@include reset;
+
+body{
+    font-family: $primay-font;
+}
+main{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+}
+.container{
+    background: #fff3e0;
+    width: 90%;
+    border-radius: 10px;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px;
+        gap: 15px;
+        h1{
+            font-size: 35px;
+            font-weight: 800;
+            text-align: center;
+            color: $contact-textcolor;
+        }
+        p{
+            color: #a5a3b7;
+            font-weight: normal;
+            font-size: 18px;
+        }
+    }
+    .contact-info{
+        display: flex;
+        gap: 20px;
+        padding-bottom: 50px;
+        .card{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            width: 230px;
+            height: 100px;
+            gap: 20px;
+
+            &:hover{
+                background: #FFFFFF;
+                cursor: pointer;
+            }
+
+            i{
+                color: $icon-color;
+                font-size: 25px;
+            }
+            p{
+                color: $contact-textcolor;
+                font-weight: 300;
+                font-size: 17.4px;
+            }
+        }
+    }
+    .wrapper{
+        background: #FFFFFF;
+        width: 700px;
+        border-radius: 10px;
+        height: 480px;
+
+        textarea{
+            resize: none;
+            border: none;
+            background: #f9f9fb;
+            border-radius: 10px;
+            padding: 20px 20px;
+            outline: none;
+            font-weight: 500;
+            font-size: 18px;
+            height: 275px;
+            width: 310px;
+        }
+
+        .inputs{
+            display: flex;
+            padding: 40px 40px;
+            gap: 20px
+        }
+        .left-input{
+
+            p{
+                color: #39396b;
+                padding-bottom: 10px;
+                font-weight: 500;
+                font-size: 18px;
+            }
+            .input{
+                padding-bottom: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .icon{
+                    border: 2px #e7e7ed solid;
+                    border-radius: 7px;
+                    border-right: none;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 15px;
+                    
+                    i{
+                        font-size: 20px;
+                        color: #39396b;
+                    }
+                }
+                input{
+                    height: 50px;
+                    width: 250px;
+                    border: 2px #e7e7ed solid;
+                    border-radius: 7px;
+                    border-left: none;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                    padding-left: 10px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #39396b;
+                    outline: none;
+                    &:focus{
+                        border: 2px $icon-color solid;
+                        border-left: none;
+                    }
+                }
+            }
+        }
+        .right-input{
+
+            p{
+                color: #39396b;
+                padding-bottom: 10px;
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+    }
+    .button
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -20px;
+        button{
+            height: 60px;
+            width: 220px;
+            border-radius: 10px;
+            border: none;
+            background: $icon-color;
+            color: white;
+            font-size: 17px;
+            cursor: pointer;
+        }
+    }
+}
+

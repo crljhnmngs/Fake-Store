@@ -9,7 +9,8 @@ $h1-color: #19063d;
 $price-color: #e92467;
 $productbg-color: #f2f2f2;
 $star-color: #fdc304;
-
+$contact-textcolor: #020333;
+$icon-color: #5f30e2;
 // ----COLORS------
 
 
@@ -59,3 +60,11 @@ $primay-font: 'Poppins', sans-serif;
     }
 }
 //------MEDIA QUERIES---
+
+@mixin reset {
+*{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
