@@ -110,7 +110,7 @@ main .heading button {
   border: none;
   color: white;
   font-size: 18px;
-  background: linear-gradient(90deg, rgb(151, 64, 242) 10%, rgb(138, 56, 245) 60%);
+  background: #5f30e2;
   cursor: pointer;
 }
 main .heading button:hover {

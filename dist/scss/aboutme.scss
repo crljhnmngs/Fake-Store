@@ -1,0 +1,82 @@
+@import 'config';
+@import 'header';
+@include reset;
+
+body{
+    font-family: $primay-font;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    padding: 0px 0;
+
+    .about-me
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        padding: 0 30px;
+
+        .name{
+            margin-left: 105px;
+            padding-bottom: 30px;
+
+            .myname{
+            font-size: 35px;
+            font-weight: 800;
+            color: $contact-textcolor;
+            letter-spacing: 2px;
+            }
+            .title{
+                font-size: 20px;
+                padding-left: 80px;
+                color: $contact-textcolor;
+                letter-spacing: 1px;
+            }
+        }
+        .info
+        {
+            width: 80%;
+            margin-left: 105px;
+            padding-bottom: 25px;
+            
+            p{
+                color: #a5a3b7;
+                font-size: 18px;
+            }
+        }
+        .contact
+        {
+            margin-left: 105px;
+            padding-bottom: 15px;
+            p{
+                font-weight: 700;
+                font-size: 18px;
+                color: $contact-textcolor;
+            }
+        }
+        .icons
+        {
+        margin-left: 105px;
+        display: flex;
+        gap: 20px;
+
+        i{
+            font-size: 25px;
+            color: $icon-color;
+        }
+        
+        }
+    }
+    
+    .image
+    {
+
+        img{
+            height: 620px;
+        }
+    }
+
+}
