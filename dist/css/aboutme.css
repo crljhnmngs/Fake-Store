@@ -85,6 +85,7 @@ nav .menu-bar i {
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -96,11 +97,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 40%;
-  padding: 0 30px;
+  width: 700px;
+  padding-left: 80px;
 }
 .container .about-me .name {
-  margin-left: 105px;
+  margin-left: 50px;
   padding-bottom: 30px;
 }
 .container .about-me .name .myname {
@@ -117,7 +118,7 @@ body {
 }
 .container .about-me .info {
   width: 80%;
-  margin-left: 105px;
+  margin-left: 50px;
   padding-bottom: 25px;
 }
 .container .about-me .info p {
@@ -125,7 +126,7 @@ body {
   font-size: 18px;
 }
 .container .about-me .contact {
-  margin-left: 105px;
+  margin-left: 50px;
   padding-bottom: 15px;
 }
 .container .about-me .contact p {
@@ -134,7 +135,7 @@ body {
   color: #020333;
 }
 .container .about-me .icons {
-  margin-left: 105px;
+  margin-left: 50px;
   display: flex;
   gap: 20px;
 }
@@ -144,4 +145,42 @@ body {
 }
 .container .image img {
   height: 620px;
+}
+
+@media screen and (max-width: 1023px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .about-me .name {
+    padding-left: 70px;
+  }
+  .container .about-me .name .myname {
+    font-size: 25px;
+  }
+  .container .about-me .name .title {
+    font-size: 18px;
+    padding-left: 40px;
+  }
+  .container .about-me .info {
+    width: 400px;
+  }
+  .container .about-me .info p {
+    padding-left: 65px;
+    font-size: 15px;
+  }
+  .container .about-me .contact {
+    padding-left: 170px;
+  }
+  .container .about-me .icons {
+    padding-left: 140px;
+    padding-bottom: 10px;
+  }
+  .container .image img {
+    height: 300px;
+    width: 320px;
+    border-radius: 50%;
+  }
 }/*# sourceMappingURL=aboutme.css.map */

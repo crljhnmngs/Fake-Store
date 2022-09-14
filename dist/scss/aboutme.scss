@@ -4,6 +4,7 @@
 
 body{
     font-family: $primay-font;
+    overflow-x: hidden;
 }
 .container
 {
@@ -16,11 +17,11 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 40%;
-        padding: 0 30px;
+        width: 700px;
+        padding-left: 80px;
 
         .name{
-            margin-left: 105px;
+            margin-left: 50px;
             padding-bottom: 30px;
 
             .myname{
@@ -39,7 +40,7 @@ body{
         .info
         {
             width: 80%;
-            margin-left: 105px;
+            margin-left: 50px;
             padding-bottom: 25px;
             
             p{
@@ -49,7 +50,7 @@ body{
         }
         .contact
         {
-            margin-left: 105px;
+            margin-left: 50px;
             padding-bottom: 15px;
             p{
                 font-weight: 700;
@@ -59,7 +60,7 @@ body{
         }
         .icons
         {
-        margin-left: 105px;
+        margin-left: 50px;
         display: flex;
         gap: 20px;
 
@@ -73,10 +74,59 @@ body{
     
     .image
     {
-
+    
         img{
             height: 620px;
         }
     }
 
+}
+
+@include media-aboutmd{
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+
+        .about-me
+        {
+            .name{
+                padding-left: 70px;
+
+                .myname
+                {
+                    font-size: 25px;
+                }
+                .title
+                {
+                    font-size: 18px;
+                    padding-left: 40px;
+                }
+            }
+            .info
+            {
+                width: 400px;
+                p{
+                    padding-left: 65px;
+                    font-size: 15px;
+                }
+            }
+            .contact{
+                    padding-left: 170px;
+            }
+            .icons{
+                padding-left: 140px;
+                padding-bottom: 10px;
+            }
+        }
+        .image{
+            img{
+                height: 300px;
+                width: 320px;
+                border-radius: 50%;
+            }
+        }
+
+    }
 }

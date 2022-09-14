@@ -34,10 +34,12 @@ main{
             color: #a5a3b7;
             font-weight: normal;
             font-size: 18px;
+            text-align: center;
         }
     }
     .contact-info{
         display: flex;
+        flex-direction: row;
         gap: 20px;
         padding-bottom: 50px;
         .card{
@@ -170,3 +172,93 @@ main{
     }
 }
 
+
+
+@include media-contactmd {
+
+    .container{
+        height: 1370px;
+        .contact-info
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .card
+            {
+                width: 350px;
+            }
+        }
+        .wrapper
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 550px;
+            height: 800px;
+
+            .inputs{
+            display: flex;
+            flex-direction: column;
+
+            .left-input{
+                p{
+                    padding-left: 75px;
+                }
+                input{
+                    width: 320px;
+                }
+                
+            }
+            .right-input
+            {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                textarea
+                {
+                    width: 500px;
+                }
+            }
+            }
+        }
+
+        
+    }
+}
+
+@include media-contactsm {
+    .container{
+        
+        .contact-info
+        .card
+            {
+                width: 300px;
+            }
+        .wrapper
+        {
+            width: 400px;
+
+        .inputs{
+
+        .left-input
+        {
+            p{
+                padding-left: 35px;
+            }
+            input{
+                width: 250px;
+            }
+        }
+        .right-input
+        {
+            textarea{
+                width: 350px;
+            }
+        }
+            }
+        }
+        
+        
+    }
+}

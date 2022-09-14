@@ -118,9 +118,11 @@ main {
   color: #a5a3b7;
   font-weight: normal;
   font-size: 18px;
+  text-align: center;
 }
 .container .contact-info {
   display: flex;
+  flex-direction: row;
   gap: 20px;
   padding-bottom: 50px;
 }
@@ -236,4 +238,60 @@ main {
   color: white;
   font-size: 17px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    height: 1370px;
+  }
+  .container .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .contact-info .card {
+    width: 350px;
+  }
+  .container .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+    height: 800px;
+  }
+  .container .wrapper .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .wrapper .inputs .left-input p {
+    padding-left: 75px;
+  }
+  .container .wrapper .inputs .left-input input {
+    width: 320px;
+  }
+  .container .wrapper .inputs .right-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container .wrapper .inputs .right-input textarea {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .container .contact-info .card {
+    width: 300px;
+  }
+  .container .wrapper {
+    width: 400px;
+  }
+  .container .wrapper .inputs .left-input p {
+    padding-left: 35px;
+  }
+  .container .wrapper .inputs .left-input input {
+    width: 250px;
+  }
+  .container .wrapper .inputs .right-input textarea {
+    width: 350px;
+  }
 }/*# sourceMappingURL=contactus.css.map */

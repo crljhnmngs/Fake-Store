@@ -59,6 +59,25 @@ $primay-font: 'Poppins', sans-serif;
     @content;
     }
 }
+
+@mixin media-contactmd {
+    @media screen and (max-width: 900px) {
+    @content;
+    }
+}
+
+@mixin media-contactsm {
+    @media screen and (max-width: 660px) {
+    @content;
+    }
+}
+
+@mixin media-aboutmd {
+    @media screen and (max-width: 1023px) {
+    @content;
+    }
+}
+
 //------MEDIA QUERIES---
 
 @mixin reset {
