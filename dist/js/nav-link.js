@@ -4,7 +4,3 @@ const items = document.querySelector('.items');
 menuButton.addEventListener('click', function () {
     items.classList.toggle('active');
 });
-
-// fetch('https://fakestoreapi.com/products')
-//     .then((res) => res.json())
-//     .then((json) => console.log(json));
