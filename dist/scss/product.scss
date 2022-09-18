@@ -43,6 +43,7 @@ main{
                 margin-top: 10px;
                 min-height: 150px;
                 max-height: 150px;
+                max-width: 280px;
             }
             .info{
                 display: flex;
@@ -56,20 +57,43 @@ main{
                     padding: 0 5px;
                     font-size: 20px;
                     font-weight: 500;
-                    
                 }
                 .price{
                     padding-top: 20px;
                     color: $price-color;
                 }
-                .rating{
+                .stars-outer{
+                    position: relative;
+                    display: inline-block;
                     padding: 15px 0;
-                    color: $star-color;
-                    
+
+                    &::before{
+                        content: "\f005 \f005 \f005 \f005 \f005";
+                        font-family: 'Font Awesome 6 Free';
+                        letter-spacing: 3px;
+                        font-weight: 900;
+                        color: #CCC;
+                    }
+                }
+                .stars-inner{
+                    position: absolute;
+                    margin-top: 15px;
+                    top: 0;
+                    left: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+
+                    &::before{
+                        content: "\f005 \f005 \f005 \f005 \f005";
+                        font-family: 'Font Awesome 6 Free';
+                        letter-spacing: 3px;
+                        font-weight: 900;
+                        color: #F8CE0B;
                 }
             }
         }
     }
+}
 }
 
 @include media-cardlg{

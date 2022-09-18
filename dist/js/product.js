@@ -1,6 +1,6 @@
 const PRODUCT_API_URL = 'https://fakestoreapi.com/products';
 
-cards = document.querySelector('.cards');
+const cards = document.querySelector('.cards');
 //     .then((res) => res.json())
 //     .then((json) => console.log(json));
 
@@ -30,12 +30,11 @@ async function getProduct() {
                         ${products.price}$
                         </h3>
                     </div>
-                    <div class="rating">
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
-                        <span><i class="fa-solid fa-star"></i></span>
+                    <div class="stars-outer">
+                        <div class="stars-inner" style="width:${getRating(
+                            products.rating.rate
+                        )};">
+                        </div>
                     </div>
                 </div>
             </div>`;
@@ -48,3 +47,10 @@ async function getProduct() {
 }
 
 getProduct();
+
+function getRating(rating) {
+    const starsTotal = 5;
+    const starsPercentage = (rating / starsTotal) * 100;
+    const starsPercentageRounded = `${Math.round(starsPercentage / 10) * 10}%`;
+    return starsPercentageRounded;
+}
