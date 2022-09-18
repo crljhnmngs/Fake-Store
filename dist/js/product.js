@@ -1,8 +1,6 @@
 const PRODUCT_API_URL = 'https://fakestoreapi.com/products';
 
 const cards = document.querySelector('.cards');
-//     .then((res) => res.json())
-//     .then((json) => console.log(json));
 
 async function getProduct() {
     await fetch(PRODUCT_API_URL)
