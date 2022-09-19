@@ -1,0 +1,126 @@
+@import 'config';
+@import 'header';
+@include reset;
+
+body{
+    font-family: $primay-font;
+    overflow-x: hidden;
+
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: $productbg-color;
+    
+    .card{
+        background: #FFFFFF;
+        display: flex;
+        gap: 20px;
+        width: 60vw;
+        height: auto;
+        padding: 25px 25px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+
+        .image{
+            display: flex;
+            background: #f4f6fa;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 20px;
+            border-radius: 7px;
+
+            img{
+                min-width: 18vw;
+                max-width: 18vw;;
+                max-height: 35vh;
+
+            }
+        }
+        .info{
+            .title{
+                padding-right: 30px;
+                font-size: 11px;
+                padding-bottom: 20px;
+            }
+            .back{
+                position: absolute;
+                top: 205px;
+                right: 310px;
+                font-size: 20px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+            .badge{
+                    padding-top: 2px;
+                    margin-bottom: 20px;
+                    background-color: #97EBF4;
+                    height: 22px;
+                    max-width: 150px;
+                    min-width: 120px;
+                    text-align: center;
+                    border-radius: 50px;
+                    font-size: 14px;
+                    font-weight: 600;
+                
+            }
+            .description{
+                color: #a5a3b7;
+                font-size: 16px;
+                padding-bottom: 30px;
+            }
+            .price{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 40px;
+                .productprice{
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+                .rating{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    .icon{
+
+                    }
+                    .line{
+                        border: 1px solid #f0eff2;
+                        height: 28px;
+                    }
+                    .reviews{
+                        font-weight: 600;
+                        color: #4c6ba7;
+                    }
+                }
+            }
+            .button{
+                button{
+                    width: 100%;
+                    border: none;
+                    height: 40px;
+                    background: #004de4;
+                    border-radius: 5px;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                    
+                    i{
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 600;
+                        font-size: 15px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

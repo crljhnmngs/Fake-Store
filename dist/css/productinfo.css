@@ -1,0 +1,191 @@
+nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+}
+nav .logo {
+  padding-left: 50px;
+}
+nav .logo img {
+  height: 40px;
+  width: 90px;
+}
+nav .items ul {
+  padding-right: 100px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+  list-style: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+nav .items ul li {
+  color: #463761;
+}
+nav .items ul li a {
+  text-decoration: none;
+  color: #463761;
+}
+nav .items ul li a:hover {
+  color: rgb(3, 105, 161);
+}
+nav .menu-bar {
+  padding-right: 40px;
+  display: none;
+}
+nav .menu-bar i {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+@media screen and (min-width: 1024px) {
+  nav .logo {
+    padding-left: 300px;
+    padding-top: 10px;
+  }
+  nav .logo img {
+    height: 55px;
+    width: 110px;
+  }
+  nav .items ul {
+    gap: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  nav .items {
+    display: none;
+  }
+  nav .items ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 70px;
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(243, 244, 246);
+    transition: 0.3s;
+  }
+  nav .menu-bar {
+    display: block;
+  }
+  .items.active {
+    display: flex;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #f2f2f2;
+}
+main .card {
+  background: #FFFFFF;
+  display: flex;
+  gap: 20px;
+  width: 60vw;
+  height: auto;
+  padding: 25px 25px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+main .card .image {
+  display: flex;
+  background: #f4f6fa;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  border-radius: 7px;
+}
+main .card .image img {
+  min-width: 18vw;
+  max-width: 18vw;
+  max-height: 35vh;
+}
+main .card .info .title {
+  padding-right: 30px;
+  font-size: 11px;
+  padding-bottom: 20px;
+}
+main .card .info .back {
+  position: absolute;
+  top: 205px;
+  right: 310px;
+  font-size: 20px;
+}
+main .card .info .back a {
+  text-decoration: none;
+  color: black;
+}
+main .card .info .badge {
+  padding-top: 2px;
+  margin-bottom: 20px;
+  background-color: #97EBF4;
+  height: 22px;
+  max-width: 150px;
+  min-width: 120px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+}
+main .card .info .description {
+  color: #a5a3b7;
+  font-size: 16px;
+  padding-bottom: 30px;
+}
+main .card .info .price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+main .card .info .price .productprice {
+  font-size: 30px;
+  font-weight: 600;
+}
+main .card .info .price .rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+main .card .info .price .rating .line {
+  border: 1px solid #f0eff2;
+  height: 28px;
+}
+main .card .info .price .rating .reviews {
+  font-weight: 600;
+  color: #4c6ba7;
+}
+main .card .info .button button {
+  width: 100%;
+  border: none;
+  height: 40px;
+  background: #004de4;
+  border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+main .card .info .button button i {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 15px;
+  padding-right: 10px;
+}/*# sourceMappingURL=productinfo.css.map */

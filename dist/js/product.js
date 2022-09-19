@@ -10,6 +10,9 @@ async function getProduct() {
 
             for (let products of responseJson) {
                 data += `
+                <a class="card-link" href="product-info.html?id=${
+                    products.id
+                }" style="text-decoration: none;">
                 <div class="card">
                 <div class="image">
                     <img
@@ -25,7 +28,7 @@ async function getProduct() {
                     </div>
                     <div class="price">
                         <h3>
-                        ${products.price}$
+                        $${products.price}
                         </h3>
                     </div>
                     <div class="stars-outer">
@@ -35,7 +38,8 @@ async function getProduct() {
                         </div>
                     </div>
                 </div>
-            </div>`;
+            </div>
+            </a>`;
             }
             cards.innerHTML = data;
         })
