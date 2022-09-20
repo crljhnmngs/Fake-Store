@@ -40,21 +40,26 @@ main{
             }
         }
         .info{
+            
             .title{
-                padding-right: 30px;
+                display: flex;
+                justify-content: space-between;
                 font-size: 11px;
                 padding-bottom: 20px;
-            }
-            .back{
-                position: absolute;
-                top: 205px;
-                right: 310px;
-                font-size: 20px;
-                a{
-                    text-decoration: none;
-                    color: black;
+                
+                h1{
+                    padding-right: 35px;
                 }
+                .back{
+                    font-size: 20px;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+                
             }
+
             .badge{
                     padding-top: 2px;
                     margin-bottom: 20px;
@@ -88,9 +93,35 @@ main{
                     align-items: center;
                     gap: 20px;
 
-                    .icon{
-
+                    .stars-outer{
+                        position: relative;
+                        display: inline-block;
+                        padding: 15px 0;
+    
+                    &::before{
+                            content: "\f005 \f005 \f005 \f005 \f005";
+                            font-family: 'Font Awesome 6 Free';
+                            letter-spacing: 3px;
+                            font-weight: 900;
+                            color: #CCC;
+                        }
                     }
+                    .stars-inner{
+                        position: absolute;
+                        margin-top: 15px;
+                        top: 0;
+                        left: 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+    
+                        &::before{
+                            content: "\f005 \f005 \f005 \f005 \f005";
+                            font-family: 'Font Awesome 6 Free';
+                            letter-spacing: 3px;
+                            font-weight: 900;
+                            color: #F8CE0B;
+                    }
+                }
                     .line{
                         border: 1px solid #f0eff2;
                         height: 28px;

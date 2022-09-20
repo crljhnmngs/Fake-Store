@@ -28,7 +28,7 @@ async function getProduct() {
                     </div>
                     <div class="price">
                         <h3>
-                        $${products.price}
+                        $${parseFloat(products.price).toFixed(2)}
                         </h3>
                     </div>
                     <div class="stars-outer">

@@ -119,17 +119,18 @@ main .card .image img {
   max-height: 35vh;
 }
 main .card .info .title {
-  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
   font-size: 11px;
   padding-bottom: 20px;
 }
-main .card .info .back {
-  position: absolute;
-  top: 205px;
-  right: 310px;
+main .card .info .title h1 {
+  padding-right: 35px;
+}
+main .card .info .title .back {
   font-size: 20px;
 }
-main .card .info .back a {
+main .card .info .title .back a {
   text-decoration: none;
   color: black;
 }
@@ -165,6 +166,33 @@ main .card .info .price .rating {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+main .card .info .price .rating .stars-outer {
+  position: relative;
+  display: inline-block;
+  padding: 15px 0;
+}
+main .card .info .price .rating .stars-outer::before {
+  content: "\f005\f005\f005\f005\f005";
+  font-family: "Font Awesome 6 Free";
+  letter-spacing: 3px;
+  font-weight: 900;
+  color: #CCC;
+}
+main .card .info .price .rating .stars-inner {
+  position: absolute;
+  margin-top: 15px;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+main .card .info .price .rating .stars-inner::before {
+  content: "\f005\f005\f005\f005\f005";
+  font-family: "Font Awesome 6 Free";
+  letter-spacing: 3px;
+  font-weight: 900;
+  color: #F8CE0B;
 }
 main .card .info .price .rating .line {
   border: 1px solid #f0eff2;
